@@ -1,0 +1,14 @@
+.c-menu{
+	display: flex;
+
+	&__item{
+		flex: 1;
+		padding: $l20 0;
+		border-bottom: 1px solid #ccc;
+		text-align: center;
+
+		&:active{
+			background-color: snow;
+		}
+	}
+}

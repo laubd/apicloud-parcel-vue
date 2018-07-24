@@ -1,0 +1,17 @@
+.c-header{
+	position: relative;
+	border-bottom: 1px solid #ccc;
+
+	&__back{
+		position: absolute;
+		padding: $l20;
+		left: $l20;
+		top: 50%;
+		transform: translate3d(0, -50%, 0);
+	}
+
+	&__title{
+		text-align: center;
+		padding: $l20 0;
+	}
+}
