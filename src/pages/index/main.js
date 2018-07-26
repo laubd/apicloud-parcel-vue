@@ -27,11 +27,18 @@ function initVue (Vue) {
             menu: [{
                 name: '首页'
             }, {
+                name: '图标'
+            }, {
                 name: '关于'
             }],
             frames: [{
                 name: 'home',
                 url: '../home/index.html',
+                bgColor : 'rgba(0,0,0,.2)',
+                bounces:true
+            }, {
+                name: 'icons',
+                url: '../icons/index.html',
                 bgColor : 'rgba(0,0,0,.2)',
                 bounces:true
             }, {

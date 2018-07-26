@@ -2,7 +2,7 @@ const fs = require('fs');
 const promisify = require('util').promisify;
 const path = require('path');
 const glob = require('glob');
-
+const signale = require('signale');
 const readFile = promisify(fs.readFile)
 const writeFile = promisify(fs.writeFile)
 
@@ -18,8 +18,8 @@ const changeHtmlSrc = async (files) => {
 
   for (let file in filesData) {
     const insertPath = findFileDeepStr(file)
-    filesData[file] = filesData[file].replace(/src="(..\/){0,}/g, `src="${insertPath}`)
-    filesData[file] = filesData[file].replace(/href="(..\/){0,}/g, `href="${insertPath}`)
+    filesData[file] = filesData[file].replace(/ src="(..\/){0,}/g, ` src="${insertPath}`)
+    filesData[file] = filesData[file].replace(/ href="(..\/){0,}/g, ` href="${insertPath}`)
     await writeFile(file, filesData[file])
   }
 
@@ -36,6 +36,6 @@ function findFileDeepStr (path) {
   return result
 }
 
-changeHtmlSrc(files)
-
-console.log('生产环境构建完成')
+changeHtmlSrc(files).then(() => {
+  signale.success('生产环境构建完成');
+})

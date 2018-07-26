@@ -2,6 +2,7 @@
 @import './_var';
 @import './_menu';
 @import './_header';
+@import './_layout';
 
 html,body {
 	-webkit-touch-callout:none;
@@ -30,5 +31,12 @@ body{
 .v-container{
     padding-top: $l40;
     padding-bottom: $l40;
+}
+
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
 }
 

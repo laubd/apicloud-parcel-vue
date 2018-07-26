@@ -1,0 +1,17 @@
+.l-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.l-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.3333333%;
+    height: 8em;
+
+    & .icon{
+        width: 3em;
+        height: 3em;
+    }
+}
