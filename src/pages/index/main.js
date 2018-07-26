@@ -27,6 +27,8 @@ function initVue (Vue) {
             menu: [{
                 name: '首页'
             }, {
+                name: '图片'
+            }, {
                 name: '图标'
             }, {
                 name: '关于'
@@ -34,6 +36,11 @@ function initVue (Vue) {
             frames: [{
                 name: 'home',
                 url: '../home/index.html',
+                bgColor : 'rgba(0,0,0,.2)',
+                bounces:true
+            }, {
+                name: 'photograph',
+                url: '../photograph/index.html',
                 bgColor : 'rgba(0,0,0,.2)',
                 bounces:true
             }, {

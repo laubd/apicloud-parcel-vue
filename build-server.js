@@ -18,8 +18,8 @@ const changeHtmlSrc = async (files) => {
 
   for (let file in filesData) {
     const insertPath = findFileDeepStr(file)
-    filesData[file] = filesData[file].replace(/ src="(..\/){0,}/g, ` src="${insertPath}`)
-    filesData[file] = filesData[file].replace(/ href="(..\/){0,}/g, ` href="${insertPath}`)
+    filesData[file] = filesData[file].replace(/ src="(..\/){0,}(?!http)/g, ` src="${insertPath}`)
+    filesData[file] = filesData[file].replace(/ href="(..\/){0,}(?!http)/g, ` href="${insertPath}`)
     await writeFile(file, filesData[file])
   }
 
