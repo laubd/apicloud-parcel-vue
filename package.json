@@ -8,17 +8,26 @@
     "build": "rm -rf dist && parcel build src/index.html --public-url ./ && node build-server.js"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-runtime": "^6.26.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-html": "^4.0.5",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
     "express": "^4.16.3",
     "glob": "^7.1.2",
     "node-sass": "^4.9.2",
-    "parcel-bundler": "^1.9.7"
+    "parcel-bundler": "^1.9.7",
+    "parcel-plugin-eslint": "^1.0.4"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "fastclick": "^1.0.6",
     "hotcss": "^2.2.1",
     "mint-ui": "^2.2.13",
     "signale": "^1.2.1",

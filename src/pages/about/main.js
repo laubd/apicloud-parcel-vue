@@ -1,12 +1,12 @@
 import '@/scripts/entry'
 import('@/scripts/vue').then(({Vue}) => {
-    window.apiready = function () {
-        initVue(Vue)
-    }
+  window.apiready = function () {
+    initVue(Vue)
+  }
 })
 
 function initVue (Vue) {
-    new Vue({
-        el: '#frame'
-    })
+  new Vue({
+    el: '#frame'
+  })
 }
