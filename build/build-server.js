@@ -6,7 +6,7 @@ const signale = require('signale');
 const readFile = promisify(fs.readFile)
 const writeFile = promisify(fs.writeFile)
 
-const files = glob.sync(path.resolve(__dirname, 'dist/**/*.html'))
+const files = glob.sync(path.resolve(__dirname, '../dist/**/*.html'))
 
 const changeHtmlSrc = async (files) => {
   const filesData = {}

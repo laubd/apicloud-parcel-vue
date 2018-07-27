@@ -20,7 +20,7 @@ const bundler = new parcel('src/index.html', {
 app.use(bundler.middleware());
 
 bundler.on('bundled', async () => {
-  const files = glob.sync(path.resolve(__dirname, 'dist/**/*.html'))
+  const files = glob.sync(path.resolve(__dirname, '../dist/**/*.html'))
   await changeHtmlSrc(files)
   signale.success('success');
 });
