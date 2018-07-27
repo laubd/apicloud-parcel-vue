@@ -1,5 +1,5 @@
 import 'mint-ui/lib/style.css'
-import Vue from 'vue/dist/vue'
+import Vue from 'vue/dist/vue.min' // eslint-disable-line
 import Mint from 'mint-ui'
 
 Vue.config.silent = true

@@ -6,12 +6,12 @@ import('@/scripts/vue').then(({Vue}) => {
 })
 
 function initVue (Vue) {
-  // const { api } = window
+  const { api } = window
   new Vue({
     el: '#frame',
     methods: {
       toUser () {
-        window.api.openWin({
+        api.openWin({
           name: 'user',
           url: '../user/index.html',
           pageParam: window.api.pageParam,
